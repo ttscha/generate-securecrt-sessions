@@ -15,8 +15,10 @@ Instructions:
 
 
 import pprint
+print("file name on temporary folder")
+import_sessions = input()
 
-with open('sessions.txt', 'r') as f:
+with open(f'temporary/{import_sessions}', 'r') as f:
 	#split file in blocks
 	document = f.read().split('\r\n\r\n')
 
@@ -77,7 +79,7 @@ for folder in document:
 			
 
 
-with open('result2.txt','w') as d:
+with open('temporary/result2.txt','w') as d:
 	for i in result:
 		d.write(i)
 		d.write('\n')
